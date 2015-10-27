@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 
 // all caps variable is to say the variable should never change
-var PORT = process.env.port || 3000;
+var PORT = process.env.PORT || 3000;
 
 var middleware = require('./middleware.js')
 
