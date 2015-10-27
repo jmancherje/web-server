@@ -5,17 +5,7 @@ var app = express();
 // all caps variable is to say the variable should never change
 var PORT = 3000;
 
-var middleware = {
-  requireAuthentication: function (req, res, next) {
-    console.log('private route hit!');
-    next();
-  },
-  logger: function (req, res, next) {
-    // new Date().toString();
-    console.log('request: ' + new Date().toString() + ' ' + req.method + ' ' + req.originalUrl);
-    next();
-  }
-};
+var middleware = require('./middleware.js')
 
 app.use(middleware.logger);
 // application level middleware
